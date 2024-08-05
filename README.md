@@ -38,3 +38,13 @@ In order to provide sufficient data for both hash function distribution testing 
 
 https://github.com/dwyl/english-words/blob/master/words_alpha.txt
 https://www.kaggle.com/datasets/adnanyaramis/coding-noncoding-dna-sequences
+
+In the Jupyter notebook, tests were written and performed using all 5 hash functions and the 4 data types to see which hashing functions perform better for which kinds of data. Statistical analysis was done by calculating chi-squared, p-value and standard deviation for each data type and hashing algorithm and evaluating the results.
+
+**5. Discussing space and time complexity**
+
+This implementation of the Bloom filter completely follows the bit-wise design and therefore has **linear time (*O(n)*) and space (*O(m)*) complexity**.
+
+- Insertion and search methods do *k* iterations through each hash function (where *k* is the number of hash functions) and inside each hash function the time complexity is *O(1)*, therefore their time complexity overall is *O(k)*.
+- The bit array size is *m* and therefore the space complexity for the bit array is *O(m)*.
+- We also have a *k* number of hash functions stored inside the bloom filter so complexity for that context is *O(k)*.
