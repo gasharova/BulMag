@@ -11,3 +11,9 @@ class JenkinsOneAtATimeHash(HashFunction):
         hash_value ^= (hash_value >> 11)
         hash_value += (hash_value << 15)
         return hash_value
+
+    def __str__(self):
+        return "JenkinsOneAtATimeHash"
+    
+    def __repr__(self):
+        return "JenkinsOneAtATimeHash()"

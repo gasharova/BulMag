@@ -8,7 +8,6 @@ class BloomFilter:
         # Not going to use this one but may be accessed for future project improvements
         self.__expected_items_number = expected_items_number
         self.__hash_functions_number = math.ceil((bit_array_size / expected_items_number) * math.log(2))
-        self.__hash_functions_list = hash_functions_list
         # Initialize the bit array with the given size and nullify each bit
         self.__bit_array = bitarray(bit_array_size)
         self.__bit_array.setall(0)
@@ -22,18 +21,32 @@ class BloomFilter:
     
     def __get_bit__(self, bit_index):
         return self.__bit_array[bit_index]
+
+    # Printout functions for debugging and quick internal state visualising
+    def __str__(self):
+        return (f"Bloom filter with length: {self.__bit_array_size}, "
+                f"expected number of items: {self.__expected_items_number}, "
+                f"current number of items: {self.__added_items_number}, "
+                f"hash functions used: {self.__hash_functions}. ")
+    
+    def __repr__(self):
+        return (f"BloomFilter(bit_array_size={self.__bit_array_size}, "
+                f"expected_items_number={self.__expected_items_number}, "
+                f"added_items_number={self.__added_items_number}, "
+                f"hash_functions_number={self.__hash_functions_number}, "
+                f"hash_functions={self.__hash_functions})")
     
     # High-level (item) setters and getters
     # Bloom filters do not allow update/delete operations!
     def add_item(self, item):
-        for i, hash_function in enumerate(self.__hash_functions_list):
+        for i, hash_function in enumerate(self.__hash_functions):
             # This works because we have a common parent of each hash function, so we just call method hash()
             digest_index = hash_function.hash(item, i) % self.__bit_array_size
             self.__set_bit__(digest_index)
         self.__added_items_number += 1
     
     def check_for_item(self, item):
-        for i, hash_function in enumerate(self.__hash_functions_list):
+        for i, hash_function in enumerate(self.__hash_functions):
             # Hash it..
             digest_index = hash_function.hash(item, i) % self.__bit_array_size
             # If this bit is missing, then for sure we have a true negative.

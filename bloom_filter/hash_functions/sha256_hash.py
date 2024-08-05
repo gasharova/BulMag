@@ -6,3 +6,9 @@ class Sha256Hash(HashFunction):
         value = value.encode('utf-8') if isinstance(value, str) else value
         value = str(seed).encode('utf-8') + value
         return int(hashlib.sha256(value).hexdigest(), 16)
+    
+    def __str__(self):
+        return "Sha256Hash"
+    
+    def __repr__(self):
+        return "Sha256Hash()"
