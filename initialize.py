@@ -2,8 +2,10 @@ from bloom_filter.bloom_filter import BloomFilter
 from bloom_filter.hash_functions.md5_hash import MD5Hash
 from bloom_filter.hash_functions.murmur_hash import MurmurHash
 
-
-# Start script here...
+from data.data_generator import get_natural_language_words
+from data.data_generator import get_random_strings
+from data.data_generator import get_dna_sequences
+from data.data_generator import get_urls
 
 md5_hash_function = MD5Hash()
 murmur_hash_function = MurmurHash()
@@ -24,3 +26,15 @@ bloom_filter_both.add_item("helloworld")
 print(bloom_filter_both)
 print(bloom_filter_both.check_for_item("johndoe"))
 print(bloom_filter_both.check_for_item("nojohndoe"))
+
+print("natural language words")
+print(get_natural_language_words(n=20))
+
+print("random strings")
+print(get_random_strings(n=20, max_length=10))
+
+print("random strings")
+print(get_dna_sequences(n=20))
+
+print("urls")
+print(get_urls(n=20))
