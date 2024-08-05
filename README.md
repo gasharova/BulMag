@@ -22,6 +22,8 @@ Seeding (defaulted to 0) was added to each hash function for reproducibility and
 
 Since different hash functions of different bit sizes are used, hash length is normalized inside the Bloom Filter.
 
+Each class has implementations of __ __repr__ __ and __ __str__ __ functions as per good programming practices.
+
 **3. Testing**
 
 Implementation is tested using basic unit tests.
