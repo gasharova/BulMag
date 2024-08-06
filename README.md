@@ -48,3 +48,28 @@ This implementation of the Bloom filter completely follows the bit-wise design a
 - Insertion and search methods do *k* iterations through each hash function (where *k* is the number of hash functions) and inside each hash function the time complexity is *O(1)*, therefore their time complexity overall is *O(k)*.
 - The bit array size is *m* and therefore the space complexity for the bit array is *O(m)*.
 - We also have a *k* number of hash functions stored inside the bloom filter so complexity for that context is *O(k)*.
+
+**6. Benchmarking time for Bloom filter and other relevant data structures**
+
+HPC was extensively used to satisfy benchmarking requirements. Along with the Bloom filter, Hash table and Python's built-in dynamic list[] structures were also benchmarked for comparison. Benchmarking was first executed with a smaller sample locally, after which HPC's architecture was used with a larger data sample. Local virtual environment was set up on the remote machine to achieve better modularization during project execution. The resulting JSON file was downloaded from the server and visualised. All 4 data categories were used for the experiment. The total result are 2 sets of 8 graphs (add and search for each of the 4 data types) which allow for further elaboration on each data structure's benefits and behavior. 
+
+# Usage
+
+Package         Version
+--------------- -----------
+bitarray        2.9.2
+cityhash        0.4.7
+contourpy       1.2.1
+cycler          0.12.1
+fonttools       4.53.1
+kiwisolver      1.4.5
+matplotlib      3.9.0
+mmh3            4.1.0
+numpy           2.0.1
+packaging       24.1
+pillow          10.4.0
+pip             22.3.1
+pyparsing       3.1.2
+python-dateutil 2.9.0.post0
+setuptools      65.5.0
+six             1.16.0

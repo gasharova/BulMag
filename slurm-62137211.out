@@ -1,0 +1,73 @@
+SLURM_JOB_ID: 62137211
+SLURM_JOB_USER: vsc36377
+SLURM_JOB_ACCOUNT: lp_h_ds_2023_2024
+SLURM_JOB_NAME: bloom_filter_testing_gasharova
+SLURM_CLUSTER_NAME: wice
+SLURM_JOB_PARTITION: batch
+SLURM_NNODES: 1
+SLURM_NODELIST: p33c22n1
+SLURM_JOB_CPUS_PER_NODE: 1
+Date: Tue Aug  6 13:01:25 CEST 2024
+Walltime: 00-02:00:00
+========================================================================
+----------------------------------------------------------------------------
+   /apps/leuven/rocky8/icelake/2023a/modules/all/Python/3.11.3-GCCcore-12.3.0.lua:
+----------------------------------------------------------------------------
+help([[
+Description
+===========
+Python is a programming language that lets you work more quickly and integrate your systems
+ more effectively.
+
+
+More information
+================
+ - Homepage: https://python.org/
+
+
+Included extensions
+===================
+flit_core-3.9.0, pip-23.1.2, setuptools-67.7.2, wheel-0.40.0
+]])
+whatis("Description: Python is a programming language that lets you work more quickly and integrate your systems
+ more effectively.")
+whatis("Homepage: https://python.org/")
+whatis("URL: https://python.org/")
+whatis("Extensions: flit_core-3.9.0, pip-23.1.2, setuptools-67.7.2, wheel-0.40.0")
+conflict("Python")
+extensions("flit_core/3.9.0,pip/23.1.2,setuptools/67.7.2,wheel/0.40.0")
+prepend_path("CMAKE_PREFIX_PATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0")
+prepend_path("CPATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/include")
+prepend_path("LD_LIBRARY_PATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/lib")
+prepend_path("LIBRARY_PATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/lib")
+prepend_path("MANPATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/share/man")
+prepend_path("PATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/bin")
+prepend_path("PKG_CONFIG_PATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/lib/pkgconfig")
+prepend_path("XDG_DATA_DIRS","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/share")
+setenv("EBROOTPYTHON","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0")
+setenv("EBVERSIONPYTHON","3.11.3")
+setenv("EBDEVELPYTHON","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/easybuild/Python-3.11.3-GCCcore-12.3.0-easybuild-devel")
+prepend_path("PYTHONPATH","/apps/leuven/rocky8/icelake/2023a/software/Python/3.11.3-GCCcore-12.3.0/easybuild/python")
+setenv("EBEXTSLISTPYTHON","flit_core-3.9.0,wheel-0.40.0,setuptools-67.7.2,pip-23.1.2")
+
+Package         Version
+--------------- -----------
+bitarray        2.9.2
+cityhash        0.4.7
+contourpy       1.2.1
+cycler          0.12.1
+fonttools       4.53.1
+kiwisolver      1.4.5
+matplotlib      3.9.0
+mmh3            4.1.0
+numpy           2.0.1
+packaging       24.1
+pillow          10.4.0
+pip             22.3.1
+pyparsing       3.1.2
+python-dateutil 2.9.0.post0
+setuptools      65.5.0
+six             1.16.0
+
+[notice] A new release of pip available: 22.3.1 -> 24.2
+[notice] To update, run: pip install --upgrade pip
