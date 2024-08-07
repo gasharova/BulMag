@@ -62,5 +62,5 @@ class BloomFilter:
         return false_positive_rate
 
     def get_compression_rate(self):
-        compression_rate = (1 - sum(self.bit_array) / self.__bit_array_size) * 100
+        compression_rate = (1 - sum(self.__bit_array) / self.__bit_array_size)
         return compression_rate

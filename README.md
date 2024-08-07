@@ -53,6 +53,21 @@ This implementation of the Bloom filter completely follows the bit-wise design a
 
 HPC was extensively used to satisfy benchmarking requirements. Along with the Bloom filter, Hash table and Python's built-in dynamic list[] structures were also benchmarked for comparison. Benchmarking was first executed with a smaller sample locally, after which HPC's architecture was used with a larger data sample. Local virtual environment was set up on the remote machine to achieve better modularization during project execution. The resulting JSON file was downloaded from the server and visualised. All 4 data categories were used for the experiment. The total result are 2 sets of 8 graphs (add and search for each of the 4 data types) which allow for further elaboration on each data structure's benefits and behavior. 
 
+**7. Exploring FP rate as a function of words inserted**
+
+For this question, all 4 data providers were used in order to plot 4 plots. Data was visualised with focus on FP rate up to the number of inserted elements for which the filter is designed, versus FP rate when more elements are incrementally inserted. All scripts and graphs are available in the Jupyter notebook.
+
+**8. Exploring the compression rate of a Bloom filter**
+
+For this question, the compression rate of the filter was analyzed as a function of the theoretical FP rate and the expected number of elements.
+Possible room for improvement could be adding analysis as a function of the observed FP rate (via simulation as in question 7 above).
+Calculations for m were performed in order to build Bloom filters and simulate all variables.
+3D plots were created in order to be able to map all 3 variables. Since the compression rate is of interest, it has been assigned the Y axis for those plots.
+Extra details can be seen with multiple points of view in the graphs.
+Again we are using here 4 types of data and all scripts and graphs are available in the Jupyter notebook.
+
+
+
 # Usage
 
 Package         Version
