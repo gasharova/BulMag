@@ -4,6 +4,36 @@ Bloom filter implementation and analysis
 Members:
 @gasharova @Istvan1996
 
+
+# Usage
+
+Please clone the repository locally in order to use the files as official package uploading is not planned in the near future.
+The Bloom filter can be imported as in the following example:
+
+```
+from bloom_filter.bloom_filter import BloomFilter
+```
+
+## Dependencies
+
+bitarray        2.9.2
+cityhash        0.4.7
+contourpy       1.2.1
+cycler          0.12.1
+fonttools       4.53.1
+kiwisolver      1.4.5
+matplotlib      3.9.0
+mmh3            4.1.0
+numpy           2.0.1
+packaging       24.1
+pillow          10.4.0
+pip             22.3.1
+pyparsing       3.1.2
+python-dateutil 2.9.0.post0
+setuptools      65.5.0
+six             1.16.0
+
+
 # Criteria coverage
 
 **1. Version control and contributions tracking**
@@ -66,25 +96,6 @@ Calculations for m were performed in order to build Bloom filters and simulate a
 Extra details can be seen with multiple points of view in the graphs.
 Again we are using here 4 types of data and all scripts and graphs are available in the Jupyter notebook.
 
+# Summary of conclusions
 
-
-# Usage
-
-Package         Version
---------------- -----------
-bitarray        2.9.2
-cityhash        0.4.7
-contourpy       1.2.1
-cycler          0.12.1
-fonttools       4.53.1
-kiwisolver      1.4.5
-matplotlib      3.9.0
-mmh3            4.1.0
-numpy           2.0.1
-packaging       24.1
-pillow          10.4.0
-pip             22.3.1
-pyparsing       3.1.2
-python-dateutil 2.9.0.post0
-setuptools      65.5.0
-six             1.16.0
+The theoretical and observed error rate of the Bloom filter, when decreasing leads to a more dense Bloom filter, and vice versa. Increasing the number of bits in the internal implementation array can help relieve this effect, but on the other hand, it requires more space. The Bloom Filter performed the best at searching speed and relatively well for adding speed when benchmarked against hash maps and dynamic python lists.
