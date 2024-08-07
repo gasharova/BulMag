@@ -14,24 +14,54 @@ The Bloom filter can be imported as in the following example:
 from bloom_filter.bloom_filter import BloomFilter
 ```
 
+Please bear in mind that most scripts and all graphs are located in the Jupyter Notebook at the root directory of this repository. To run it, please navigate into the folder after cloning and run:
+
+```
+jupyter notebook
+```
+
+To install jupyter, you can run:
+
+```
+pip install notebook 
+```
+
 ## Dependencies
 
+Packages used:
+
 bitarray        2.9.2
+
 cityhash        0.4.7
+
 contourpy       1.2.1
+
 cycler          0.12.1
+
 fonttools       4.53.1
+
 kiwisolver      1.4.5
+
 matplotlib      3.9.0
+
 mmh3            4.1.0
+
 numpy           2.0.1
+
 packaging       24.1
+
 pillow          10.4.0
+
 pip             22.3.1
+
 pyparsing       3.1.2
+
 python-dateutil 2.9.0.post0
+
 setuptools      65.5.0
+
 six             1.16.0
+
 
 
 # Criteria coverage
