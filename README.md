@@ -4,7 +4,6 @@ Bloom filter implementation and analysis
 Members:
 @gasharova @Istvan1996
 
-
 # Usage
 
 Please clone the repository locally in order to use the files as official package uploading is not planned in the near future.
@@ -61,7 +60,6 @@ python-dateutil 2.9.0.post0
 setuptools      65.5.0
 
 six             1.16.0
-
 
 
 # Criteria coverage
