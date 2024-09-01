@@ -3,15 +3,19 @@ import math
 
 class BloomFilter:
     def __init__(self, bit_array_size, expected_items_number, hash_functions_list):
+        
         # Initialize class members from constructor parameters
         self.__bit_array_size = bit_array_size
+        
         # Not going to use this one but may be accessed for future project improvements
         self.__expected_items_number = expected_items_number
         self.__hash_functions_number = math.ceil((bit_array_size / expected_items_number) * math.log(2))
+        
         # Initialize the bit array with the given size and nullify each bit
         self.__bit_array = bitarray(bit_array_size)
         self.__bit_array.setall(0)
         self.__added_items_number = 0
+        
         # Extract the first k hash functions and set them for our class
         self.__hash_functions = hash_functions_list[:self.__hash_functions_number]
 
