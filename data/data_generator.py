@@ -22,6 +22,7 @@ def get_natural_language_words(n):
                     words[r] = word
 
         dataset_size = len(words)
+        
         # If the requested n is larger than the dataset size, duplicate words
         # This is ok as it reflects real scenario (duplicates are normal for real data)
         if n > len(words):
@@ -63,6 +64,7 @@ def get_dna_sequences(n):
                     sequences[r] = sequence
 
         dataset_size = len(sequences)
+        
         # If the requested n is larger than the dataset size, duplicate sequences
         # This is ok as it reflects real scenario (duplicates are normal for real data)
         if n > len(sequences):
